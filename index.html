@@ -9,8 +9,45 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+        <h1>Online Sida</h1>
+            <form>
+        <div id="username">
+                <label for="fname"> Användarnamn</label>
+                <br>
+                <input type="text"> 
+        </div>
+                <br>
+        <div id="password">
+                <label for="password">Lösenord</label>
+                <br>
+                <input type="text">
+        </div>
+                <br>
+        <div id="button">
+                <input type="button" value="Logga in">
+        </div>
+            </form>
+    </header>
+    <main>
+        <div id="notloggedin">
+            <h2> Välkommen till sidan </h2>
+            <p> På den här sidan kan du logga in, eller skapa ett loggin.</p>
+        </div>
+        <div id="loggedin">
+            <h2>Välkommen in.</h2>
+            <p>Du har nu framgångsrikt loggat in på sidan</p>
+        </div>
+        <div id="notableloggin">
+            <h2>Något gick fel.</h2>
+            <p>Du har angett fel lösenord eller användarnamn. <br> Du har inte lyckats att logga in. </p>
+        </div>
+       </main>
+    <footer>
+        <h2>Kontaktuppgifter</h2>
+        <br>
+        <p>Mejl: enmejl@mejl.se</p>
+        <p>Adress: en adress</p>
+    </footer>
 </body>
 </html>

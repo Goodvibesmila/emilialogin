@@ -1,8 +1,15 @@
+/* GrundCSS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
 }
+
+/* CSS för header och innehåll i header */
 
 header {
     background-color: black;
@@ -10,7 +17,22 @@ header {
     height: 14rem; 
     width: 100%;
     color: white;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
 }
+.moreusers {
+
+}
+header h2 {
+    
+}
+
+header form {
+
+}
+
+/* CSS för main och innehåll i main */
 
 main {
     background-color: rgb(217, 0, 0);
@@ -20,10 +42,18 @@ main {
     color: white;
 }
 
+/* CSS för footer och innehåll i footer*/
+
 footer {
     background-color: rgb(0, 38, 253);
     padding: 2rem;
     height: 10rem; 
     width: 100%;
     color: white;
+}
+
+/* CSS för att underlätta JS-kod */
+
+.logout {
+    display: none;
 }

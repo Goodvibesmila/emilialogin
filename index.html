@@ -11,37 +11,44 @@
 <body>
     <header>
         <h1>Online Sida</h1>
-            <form>
-        <div id="username">
+        <!-- This is my login form-->
+            <form class="form">
+        <div class="username">
                 <label for="fname"> Användarnamn</label>
                 <br>
-                <input type="text"> 
+                <input class="user" type="text"> 
         </div>
                 <br>
-        <div id="password">
+        <div class="password">
                 <label for="password">Lösenord</label>
                 <br>
-                <input type="text">
+                <input class="word" type="text">
         </div>
                 <br>
-        <div id="button">
+        <div class="button">
                 <input type="button" value="Logga in">
         </div>
             </form>
+            <!--This is were form ends-->
+                <button class="logout">Logga ut</button>
+        <div class="moreusers">
+                <h2>Skapa ett nytt loggin</h2>
+                <form action="">
+                    <label for="fname">Välj användarnamn</label>
+                    <br>
+                    <input type="text">
+                    <br>
+                    <label for="password">Välj ditt lösenord</label>
+                    <br>
+                    <input type="text">
+                    <br>
+                    <input type="button" value="logga in">
+                </form>
+        </div>
     </header>
     <main>
-        <div id="notloggedin">
-            <h2> Välkommen till sidan </h2>
+            <h2> STARTSIDA </h2>
             <p> På den här sidan kan du logga in, eller skapa ett loggin.</p>
-        </div>
-        <div id="loggedin">
-            <h2>Välkommen in.</h2>
-            <p>Du har nu framgångsrikt loggat in på sidan</p>
-        </div>
-        <div id="notableloggin">
-            <h2>Något gick fel.</h2>
-            <p>Du har angett fel lösenord eller användarnamn. <br> Du har inte lyckats att logga in. </p>
-        </div>
        </main>
     <footer>
         <h2>Kontaktuppgifter</h2>

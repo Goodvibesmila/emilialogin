@@ -9,11 +9,15 @@ const button = document.querySelector(".button");
 const logoutbutton = document.querySelector(".logout");
 const headlinemain = document.querySelector("main h2" );
 const paragraphmain = document.querySelector("main p" );
+const moreusers = document.querySelector(".moreusers" );
+const newusername = document.querySelector(".newusername" );
+const newuserpassword = document.querySelector(".newuserpassword" );
+const newuserbutton = document.querySelector(".newuserbutton" );
 
 
 // Här kommer min information som skall hämtas och är sparad i lådor. Variabler.
 
-const users = [
+let users = [
     {
         userName: "Fredrik",
         passWord: "12345",
@@ -28,13 +32,11 @@ const users = [
     }
 ]
 
-
 // Här är mina kommandon för att säga åt webbläsare att något ska hända.
-
 
 button.addEventListener("click", control);
 logoutbutton.addEventListener("click", logout)
-
+newuserbutton.addEventListener("click", addnew, control);
 
 // Här skapas min kontroll av lösen/användarnamn. Det görs genom en funktion, samt if/else.
 
@@ -47,9 +49,6 @@ function control() {
     } 
 }
 wronguser();
-
-
-    //Sätt en loop runt ifsats.
 }
 
 // Här är en funktion med vad som ska hända om användarnamnet är godkänt.
@@ -57,6 +56,25 @@ wronguser();
 function rightuser(rightname) {
     form.style.display = "none";
     headlinemain.innerText = "Välkommen " + rightname;
+    paragraphmain.innerText = "Du har lyckats att logga in";
+    logoutbutton.style.display = "block";
+}
+
+// Här är kod för nya användare
+
+function addnew(rightname) {
+    let addnewuser = {
+        userName: newusername.value
+        ,
+        passWord: newuserpassword.value
+    }
+
+    users.push(addnewuser)
+
+    localStorage.setItem("storage", JSON.stringify(users));
+    headlinemain.innerText = "Välkommen " + rightname;
+    moreusers.style.display = "none";
+    form.style.display = "none";
     paragraphmain.innerText = "Du har lyckats att logga in";
     logoutbutton.style.display = "block";
 }
@@ -73,13 +91,15 @@ function wronguser() {
 function logout() {
     headlinemain.innerText = "Utloggad.";
     paragraphmain.innerText = "Du har loggat ut.";
+    moreusers.style.display = "block";
     form.style.display = "block";
     logoutbutton.style.display = "none";
     user.value = "";
     word.value = "";
+    newusername.value = "";
+    newuserpassword.value = "";
 }
 
 // Här kommer kod för localstorage
 
-localStorage.setItem("storage", JSON.stringify(users));
-users = JSON.parse(localstorage.getItem(storage));
+users = JSON.parse(localStorage.getItem("storage"));

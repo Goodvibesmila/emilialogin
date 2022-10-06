@@ -91,7 +91,7 @@ function wronguser() {
 // Här är logga ut sidan
 
 function logout() {
-    headlinemain.innerText = "Utloggad.";
+    headlinemain.innerText = "Hej då.";
     paragraphmain.innerText = "Du har loggat ut.";
     moreusers.style.display = "block";
     form.style.display = "block";

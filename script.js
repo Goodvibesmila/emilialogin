@@ -15,11 +15,6 @@ const newuserpassword = document.querySelector(".newuserpassword");
 const newuserbutton = document.querySelector(".newuserbutton");
 
 
-if (!localStorage.getItem("storage")) {
-    localStorage.setItem("storage", JSON.stringify(users))
-}
-
-
 // Här kommer min information som skall hämtas och är sparad i lådor. Variabler.
 
 let users = [

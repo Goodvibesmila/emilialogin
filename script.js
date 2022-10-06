@@ -37,6 +37,10 @@ let users = [
     }
 ]
 
+if (!localStorage.getItem("storage")) {
+    localStorage.setItem("storage", JSON.stringify(users))
+}
+
 // Här är mina kommandon för att säga åt webbläsare att något ska hända.
 
 function start() 
